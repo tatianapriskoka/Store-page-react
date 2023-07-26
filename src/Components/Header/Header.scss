@@ -1,0 +1,24 @@
+@import '../styles.scss';
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $blue;
+    font-family: $redcollar;
+    height: 100px;
+    width: 100vw;
+}
+
+.header__text {
+    padding: 1% 0 2% 2%;
+    font-size: 20px;
+    color: $white;
+}
+
+@media(max-width:768px) {
+    .header__text {
+        font-size: 12px;
+    }
+}
