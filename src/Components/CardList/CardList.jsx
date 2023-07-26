@@ -17,7 +17,6 @@ const CardList = () => {
     useEffect(() => {
         axios.get(url).then((response) => {
             let items = response.data;
-            console.log(items);
             for (let item of items) {
                 item.liked = false
             }
@@ -31,8 +30,8 @@ const CardList = () => {
 
     const handleLikeStatus = (liked) => {
         return !liked
-            ? <img src="/like-empty.svg" alt="like empty pic" />
-            : <img src="/like-liked.svg" alt="like liked pic" />
+            ? <img src="./like-empty.svg" alt="like empty pic" />
+            : <img src="./like-liked.svg" alt="like liked pic" />
     }
 
     const onChangeClick = id => dispatch(changeCard(id))
@@ -79,7 +78,7 @@ const CardList = () => {
                                 <button className="btn"
                                     onClick={() => onDeleteCard(item.id)}
                                 >
-                                    <img src="/delete_button.svg" alt="delete-button" />
+                                    <img src="./delete_button.svg" alt="delete-button" />
                                 </button>
                             </div>
                         </div>
